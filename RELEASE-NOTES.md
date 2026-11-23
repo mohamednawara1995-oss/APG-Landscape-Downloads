@@ -1,13 +1,15 @@
-APG Landscape 1.8.2 — Revit 2024 and 2025
+APG Landscape 1.8.7 — Revit 2024 and 2025
 
-Adds a separate Elements Tag tool for furniture, lighting, signage and other selectable model categories, with the approved bench/light/tag icon.
+Updates since 1.8.2:
+- Streetscape Ramp: improved native curved-edge height checks, preservation of the surrounding shaped surface, and handling of exact pre-existing floor/toposolid warnings. New overlaps and unrelated errors still roll back.
+- Complex floors: removed the 15,000 preservation-sample limit without splitting floors; spatial lookup reduces unnecessary native face queries while retaining whole-floor checks and existing tolerances.
+- Separate Floors: preserves interior slab-shape points, their elevations, and non-boundary creases when separating disconnected regions. Native curved boundaries, floor data, and grouped/dependent-object safeguards remain.
 
-Each new tag has its own Free leader. Elements sharing a code are not consolidated. Choose categories, native tag family, model/link sources, worksets and editable instance/type parameter rules. Save independent presets. Group members can be tagged without ungrouping. Symbolic-only elements can use their native insertion point. Existing tags are not duplicated; incompatible labels or unplaced items are reported by Element ID.
+Validation: 13 separation integration cases, 35 ramp/walkway/warning regressions, 2,500 boundary grid checks and 20 earthwork assertions passed in Revit 2024. The complex-floor stress case checked 17,940 samples; the source preparation captured 17,595. Actual packaged DLL preview, rollback, commit and separate verification passed on isolated copies. All 17 combined-installer assertions passed. Revit 2025 plugin/test builds passed; live 2025 testing has not been performed for these fixes.
 
-Hardscape and Shrubs & Ground Covers retain their existing workflows. Use the preview image and coordinate report before applying.
+Existing tagging tools, embedded families, other landscape tools and update controls are retained. The separator splits disconnected regions; it does not cut continuous floors.
 
-Validation: six Elements checks passed live in isolated Revit 2024 documents, plus the existing 11 Shrubs and six Hardscape regression checks. Both host builds and 17 combined-installer assertions passed. Revit 2025 tagging has build/installer validation only; live integration testing is pending.
+Save work and close Revit before installing APGLandscapeSetup.exe. Choose 2024, 2025 or both. Existing public-feed users can use Check for Updates, then restart Revit. Older loader or local-trial installations should run this combined setup once. If Revit shows an already-existing site warning, review it and choose OK to continue or Cancel to roll back.
 
-Public installer and update feeds require no GitHub sign-in. Save your work and close Revit before installing. Existing public-feed users can use Check for Updates and restart Revit to activate the verified update. Older private-feed/local-trial users should install this setup once.
-
-Copyright © 2026 Mohamed Nawara. All rights reserved. Compiled downloads only; plugin source remains private.
+Copyright © 2026 Mohamed Nawara. All rights reserved.
+Compiled downloads are public; source and family archives remain private.
