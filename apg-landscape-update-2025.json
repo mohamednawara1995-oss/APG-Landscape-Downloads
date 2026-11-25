@@ -1,8 +1,8 @@
 {
-  "version": "1.8.7",
+  "version": "1.8.9",
   "revitVersion": "2025",
-  "minLoaderVersion": "2.0.0",
+  "minLoaderVersion": "2.0.1",
   "packageAssetName": "APG-Landscape-Revit2025-payload.zip",
-  "packageSha256": "6d00ae7d5ae98b7c9aa13769404b409e49bc0366de89f4157cb1282391cd4fec",
-  "dllSha256": "3db28dfa966511791916f28afc4c20cbadeb6dac3775f2bf6c1f1ccb1ecfa6f1"
+  "packageSha256": "2ac29a0fbec51483abba221ff266e49dad61238440df9c925e0efe7f92bcb2d9",
+  "dllSha256": "164bcdb25c43a875a545b6274d1ac773861fde653a5ae1544b9af6c137fe90a5"
 }

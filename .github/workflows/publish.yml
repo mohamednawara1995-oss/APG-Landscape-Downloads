@@ -26,5 +26,5 @@ jobs:
             Expand-Archive $m.packageAssetName $folder
             if((Get-FileHash (Join-Path $folder 'APGLandscape.dll')).Hash.ToLowerInvariant() -ne $m.dllSha256){throw 'DLL checksum mismatch'}
           }
-          gh release create "v$v" APGLandscapeSetup.exe APG-Landscape-Revit2024-payload.zip APG-Landscape-Revit2025-payload.zip apg-landscape-update.json apg-landscape-update-2025.json --target "$env:GITHUB_SHA" --title "APG Landscape v$v" --notes-file RELEASE-NOTES.md --latest
+          gh release create "v$v" LandscapeToolsSetup.exe APGLandscapeSetup.exe APG-Landscape-Revit2024-payload.zip APG-Landscape-Revit2025-payload.zip apg-landscape-update.json apg-landscape-update-2025.json --target "$env:GITHUB_SHA" --title "Landscape Tools v$v" --notes-file RELEASE-NOTES.md --latest
           if($LASTEXITCODE -ne 0){throw 'Release publication failed'}
